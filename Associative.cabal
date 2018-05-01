@@ -1,0 +1,35 @@
+name:                  Associative
+version:               0.1.0.0
+-- synopsis:
+-- description:
+homepage:              https://github.com/BebeSparkelSparkel/Associative#readme
+license:               BSD3
+license-file:          LICENSE
+author:                William Rusnack
+maintainer:            williamrusnack@gmail.com
+copyright:             2018 William Rusnack
+category:              Web
+build-type:            Simple
+extra-source-files:    README.md
+cabal-version:         >=1.10
+
+library
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+  exposed-modules:     Lib
+  ghc-options:         -Wall
+  hs-source-dirs:      src
+
+test-suite test-listOrdered
+  build-depends:       base >= 4.7 && < 5
+                     , Lib
+                     , hspec
+  default-language:    Haskell2010
+  ghc-options:         -Wall -fno-warn-orphans
+  hs-source-dirs:      tests
+  main-is:             test-listOrdered.hs
+  type:                exitcode-stdio-1.0
+
+source-repository head
+  type:                git
+  location:            https://github.com/BebeSparkelSparkel/Associative
